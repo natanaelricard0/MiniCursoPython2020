@@ -1,12 +1,9 @@
-# 8- Faça um programa que receba três notas, mostre a média aritmética delas e informe se o aluno foi aprovado ou reprovado ( média para passar= 6).
+# Faça um programa que calcule a área de um círculo e exiba o resultado na tela. {Fórmula: A = pi * raio ^ 2}
 
-n1 = float(input('Informe sua primeira nota: ')) #pede para o usuário informar suas 3 notas
-n2 = float(input('Informe sua segunda nota: '))
-n3 = float(input('Informe sua terceira nota: '))
+import math #importa a biblioteca math do Python para utilizarmos o Pi
 
-media = (n1 + n2 + n3) / 3 #faz a soma e divide pela quantidade de notas e guarda o resultado numa variável denominada media
+raio = float(input('Informe o valor do raio: ')) #pede para o usuário informar o raio do círculo
 
-if media < 6: #se a nota for menor que 6 ele mostra para o usuário que ele foi reprovado
-    print('Reprovado')
-else: #se não mostra que está aprovado
-    print('Aprovado')
+area = (math.pi * raio ** 2) #fórmula para área do círculo, guarda o valor numa variável
+
+print('A área do círculo é',area,'m^2') #mostra na tela o resultado que foi guardado na variável área para o usuário

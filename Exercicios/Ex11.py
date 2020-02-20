@@ -1,10 +1,14 @@
-# 11- Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
+# 11- Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
 
-nota = float(input('Informe uma nota entre 0 e 10: ')) #pede a nota para o usuário
+prod1 = float(input('Informe o preço do 1° produto: ')) #pede o preço dos 3 produtos para o usuário
+prod2 = float(input('Informe o preço do 2° produto: '))
+prod3 = float(input('Informe o preço do 3° produto: '))
 
-while True: #enquanto for verdade...
-    if nota < 0 or nota > 10: #se a nota for menor do que 0 OU maior do que 10 mostre na tela para tentar novamente
-        print('Nota inválida, tente novamente') 
-        nota = float(input('Informe uma nota entre 0 e 10: ')) #mostra o menu input para o usuário
-        continue #continua repetindo caso a condição não seja atendida
-    break #caso a condição seja atendida, o programa para de executar (break = parar)
+if prod1 < prod2 and prod1 < prod3: #se o produto 1 for menor que o produto 2 e do que o produto 3, produto 1 é o mais barto
+    print('O produto 1 é o mais barato')
+
+elif prod2 < prod1 and prod2 < prod3: #senão, o produto 2 for menor do que o produto 1 e do que o produto 3, produto 2 é o mais barato
+    print('O produto 2 é o mais barato')
+
+elif prod3 < prod1 and prod3 < prod2: #senão, o produto 3 for menor do que o produto 1 e do que o produto 2, produto 3 é o mais barato 
+    print('O produto 3 é o mais barato')

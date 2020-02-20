@@ -1,18 +1,14 @@
-# 9- Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar:
+# 9- Faça um programa que receba três notas, mostre a média aritmética delas e informe se o aluno foi aprovado ou reprovado ( média para passar= 6).
 
-n1 = float(input('Informe sua primeira nota: ')) #pede para o usuário informar suas 4 notas parciais
+n1 = float(input('Informe sua primeira nota: ')) #pede para o usuário informar suas 3 notas
 n2 = float(input('Informe sua segunda nota: '))
 n3 = float(input('Informe sua terceira nota: '))
-n4 = float(input('Informe sua quarta nota: '))
 
-media = (n1 + n2 + n3 + n4) / 4 #soma as notas e divide pela quantidade de notas
+media = (n1 + n2 + n3) / 3 #faz a soma e divide pela quantidade de notas e guarda o resultado numa variável denominada media
 
-if media >= 6: #se a media for maior ou igual a 6 mostra que foi aprovado
-    print('Aprovado')
+print(media) #mostra na tela o resultado que foi guardado na variável média
 
-elif media < 6: #se a media for menor do que 6 mostra que foi reprovado
+if media < 6: #se a nota for menor que 6 ele mostra para o usuário que ele foi reprovado
     print('Reprovado')
-
-elif media == 10: #se a nota for igual a 10 mostra que foi aprovado com distinção
-    print('Aprovado com distinção')
-    
+else: #se não mostra que está aprovado
+    print('Aprovado')

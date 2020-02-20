@@ -1,10 +1,11 @@
-# 12- Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.
+# 12- Faça um programa que peça uma nota, entre zero e dez.
+# Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
 
-nomeUsuario = input('Informe seu nome: ') #pede as informações do usuário
-senhaUsuario = input('Informe sua senha: ')
+nota = float(input('Informe uma nota entre 0 e 10: ')) #pede a nota para o usuário
 
-while nomeUsuario == senhaUsuario: #enquanto nome de usuário for igual a senha, o programa deve pedir novamente as informações do usuário
-    print('Nome de usuário não pode ser igual senha, tente novamente') #caso sejam iguais, o programa pede para o usuário enviar novamente suas informações
-    nomeUsuario = input('Informe seu nome: ')
-    senhaUsuario = input('Informe sua senha: ')
-
+while True: #enquanto for verdade...
+    if nota < 0 or nota > 10: #se a nota for menor do que 0 OU maior do que 10 mostre na tela para tentar novamente
+        print('Nota inválida, tente novamente') 
+        nota = float(input('Informe uma nota entre 0 e 10: ')) #mostra o menu input para o usuário
+        continue #continua repetindo caso a condição não seja atendida
+    break #caso a condição seja atendida, o programa para de executar (break = parar)
